@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="373,165" size="665,4410">
+    <action name="sectionAction_*" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="list.jsp" />
+      </result>
+      <result name="toList" />
+    </action>
+    <action name="boardAction_*" location="0,0" size="0,0">
+      <result name="show">
+        <resourceEdge source="show" routing="0" target="show.jsp" />
+      </result>
+    </action>
+    <action name="topicAction_*" location="0,0" size="0,0">
+      <result name="addUI">
+        <resourceEdge source="addUI" routing="0" target="addUI.jsp" />
+      </result>
+      <result name="show">
+        <resourceEdge source="show" routing="0" target="show.jsp" />
+      </result>
+      <result name="toShow" />
+    </action>
+    <action name="replyAction_*" location="0,0" size="0,0">
+      <result name="addUI">
+        <resourceEdge source="addUI" routing="0" target="addUI.jsp" />
+      </result>
+      <result name="toTopicShow" />
+    </action>
+  </package>
+  <package name="login" location="0,0" size="0,0">
+    <action name="login" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="test.jsp" path="/test.jsp" location="1093,1445" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/roleAction/list.jsp" location="1074,2145" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/roleAction/addUI.jsp" location="1099,1970" size="150,55" />
+  <webResource name="editUI.jsp" path="/WEB-INF/jsp/roleAction/editUI.jsp" location="1099,1795" size="150,55" />
+  <webResource name="setPrivilegeUI.jsp" path="/WEB-INF/jsp/roleAction/setPrivilegeUI.jsp" location="1077,1620" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/departmentAction/list.jsp" location="1086,2670" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/departmentAction/addUI.jsp" location="1076,2495" size="150,55" />
+  <webResource name="editUI.jsp" path="/WEB-INF/jsp/departmentAction/editUI.jsp" location="1077,2320" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/userAction/list.jsp" location="1073,3545" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/userAction/addUI.jsp" location="1098,3370" size="150,55" />
+  <webResource name="editUI.jsp" path="/WEB-INF/jsp/userAction/editUI.jsp" location="1098,3195" size="150,55" />
+  <webResource name="logout.jsp" path="/WEB-INF/jsp/userAction/logout.jsp" location="1097,3020" size="150,55" />
+  <webResource name="index.jsp" path="/index.jsp" location="1093,2845" size="150,55" />
+  <webResource name="{1}.jsp" path="/WEB-INF/jsp/homeAction/{1}.jsp" location="1104,3720" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/forumManageAction/list.jsp" location="1079,4245" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/forumManageAction/addUI.jsp" location="1104,4070" size="150,55" />
+  <webResource name="editUI.jsp" path="/WEB-INF/jsp/forumManageAction/editUI.jsp" location="1104,3895" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/forumAction/list.jsp" location="788,4630" size="150,55" />
+  <webResource name="show.jsp" path="/WEB-INF/jsp/forumAction/show.jsp" location="1096,4420" size="150,55" />
+  <webResource name="show.jsp" path="/WEB-INF/jsp/topicAction/show.jsp" location="84,4245" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/topicAction/addUI.jsp" location="81,4420" size="150,55" />
+  <webResource name="moveUI.jsp" path="/WEB-INF/jsp/topicAction/moveUI.jsp" location="391,4630" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/replyAction/addUI.jsp" location="81,395" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/processDefinitionAction/list.jsp" location="370,10" size="150,55" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/processDefinitionAction/addUI.jsp" location="10,220" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/applicationTemplateAction/list.jsp" location="1096,220" size="150,55" />
+  <webResource name="saveUI.jsp" path="/WEB-INF/jsp/applicationTemplateAction/saveUI.jsp" location="735,10" size="150,55" />
+  <webResource name="applicationTemplateList.jsp" path="/WEB-INF/jsp/flowAction/applicationTemplateList.jsp" location="1083,1270" size="150,55" />
+  <webResource name="submitUI.jsp" path="/WEB-INF/jsp/flowAction/submitUI.jsp" location="1090,1095" size="150,55" />
+  <webResource name="myApplicationList.jsp" path="/WEB-INF/jsp/flowAction/myApplicationList.jsp" location="1101,920" size="150,55" />
+  <webResource name="myTaskList.jsp" path="/WEB-INF/jsp/flowAction/myTaskList.jsp" location="1085,745" size="150,55" />
+  <webResource name="approveUI.jsp" path="/WEB-INF/jsp/flowAction/approveUI.jsp" location="1085,570" size="150,55" />
+  <webResource name="approveHistory.jsp" path="/WEB-INF/jsp/flowAction/approveHistory.jsp" location="1106,395" size="150,55" />
+  <webResource name="list.jsp" path="/WEB-INF/jsp/front/sectionAction/list.jsp" location="0,0" size="0,0" />
+  <webResource name="show.jsp" path="/WEB-INF/jsp/front/boardAction/show.jsp" location="0,0" size="0,0" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/front/topicAction/addUI.jsp" location="0,0" size="0,0" />
+  <webResource name="show.jsp" path="/WEB-INF/jsp/front/topicAction/show.jsp" location="0,0" size="0,0" />
+  <webResource name="addUI.jsp" path="/WEB-INF/jsp/front/replyAction/addUI.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

@@ -1,0 +1,35 @@
+#topic_fenye3{/*回帖图标*/
+	width: 77px;
+	height: 33px;
+	float: left;
+	margin-left: 5px;
+}
+.pl_td1 {/*post-list.jsp页帖子列表左边框背景*/
+	width:158px;
+	/*background-color:#E5EDF2;*/
+	border-right:1px solid #c2d5e3;
+}
+.pl_td3 {/*post-list.jsp页每个帖子中间分割线*/
+	width:158px;
+	/*background-color:#c2d5e3;
+	border-right:1px solid #c2d5e3;*/
+}
+.pl_td4 {/*post-list.jsp页每个帖子中间分割线*/
+	width:799px;
+	/*background-color:#e5edf2;*/
+	
+}
+.post_subpost{/*post-list.jsp页回帖框里面的回帖提交按钮背景*/
+	width: 70px;
+	height: 25px;
+	border: 0px solid red;
+	cursor:pointer;
+	color: white;
+}
+.topic_sub{
+	width: 70px;
+	height: 25px;
+	border: 0px solid red;
+	cursor:pointer;
+	color: white;
+}

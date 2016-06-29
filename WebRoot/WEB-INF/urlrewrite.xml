@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Configuration file for UrlRewriteFilter http://tuckey.org/urlrewrite/
+-->
+<urlrewrite>
+
+    <rule>
+        <from>^/index.html</from>
+        <to>/homeAction_index.action</to>
+    </rule>
+    <rule>
+        <from>^/register.html</from>
+        <to>/userAction_registerUI.action</to>
+    </rule>
+    <rule>
+        <from>^/forum.html</from>
+        <to>/sectionAction_list.action</to>
+    </rule>
+    <rule>
+        <from>^/forum-([0-9]+)\.html</from>
+        <to>/boardAction_show.action?id=$1</to>
+    </rule>
+    <rule>
+        <from>^/forum-([0-9]+)-([0-9]+)\.html</from>
+        <to>/boardAction_show.action?id=$1&amp;pageNum=$2</to>
+    </rule>
+    <rule>
+        <from>^/topic-([0-9]+)\.html</from>
+        <to>/topicAction_show.action?id=$1</to>
+    </rule>
+    <rule>
+        <from>^/topic-([0-9]+)-([0-9]+)\.html</from>
+        <to>/topicAction_show.action?id=$1&amp;pageNum=$2</to>
+    </rule>
+    <rule>
+        <from>^/topicnew-([0-9]+)\.html</from>
+        <to>/topicAction_addUI.action?boardId=$1</to>
+    </rule>
+    <rule>
+        <from>^/adminUI\.html</from>
+        <to>/adminAction_loginUI.action</to>
+    </rule>
+    <rule>
+        <from>^/replyadd\.html</from>
+        <to>/replyAction_add.action </to>
+    </rule>
+    <rule>
+        <from>^/replyaddUI\.html</from>
+        <to>/replyAction_addUI.action</to>
+    </rule>
+	<!-- 
+    <rule>
+        <from>^/topic-([0-9]+)-([0-9]+)\.html</from>
+        <to>/topic.jsp?tid=$1&amp;page=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/topic-([0-9]+)-r([0-9]+)\.html</from>
+        <to>/topic.jsp?tid=$1&amp;rid=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/forum-([0-9]+)-([0-9]+)-([0-9]+)\.xml</from>
+        <to>/rss?sid=$1&amp;fid=$2&amp;style=$3</to>
+    </rule>
+
+    <rule>
+        <from>^/topics-([a-z]+)-([0-9]+)\.xml</from>
+        <to>/rss?fid=$1&amp;style=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/forums-([0-9a-z]+)-([0-9]+)\.xml</from>
+        <to>/opml?sid=$1&amp;style=$2</to>
+    </rule>
+	 -->
+</urlrewrite>
+

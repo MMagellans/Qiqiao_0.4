@@ -1,0 +1,301 @@
+body{
+	background-color: white;
+}
+#tp1_back{/*顶部的背景图片*/
+	width: 100%;
+	height: 437px;
+	border: 0px solid red;
+	background-image: url("bgimg.jpg");
+	background-repeat: repeat-x;
+	z-index: -1;
+}
+.input_1{
+	width: 160px;
+	height:19px;
+	border-bottom: 1px solid #e0e0e0;
+	border-left: 1px solid #848484;
+	border-right: 1px solid #e0e0e0;
+	border-top:0px;
+	background: url("search.png") repeat-x -0px -227px;
+}
+.input_2{
+	width: 60px;
+	height: 22px;
+	border: 1px solid #e0e0e0;
+	background: url("search.png") repeat-x 0px 0px;
+	cursor: pointer;
+}
+
+/*导航条*/
+#nav{
+  width: 960px;
+  height: 33px;
+  background: url("nv.png") repeat-x 0px -33px;
+  margin: 5px auto;
+}
+#nav1{
+  text-align: center;
+  font-size: 13px;
+  font-family: microsoft yahei, Helvetica, sans-serif;
+}
+#nav ul{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+#nav li{  
+  float: left;
+  }
+#nav li a{
+  text-decoration: none;
+  color: white;
+  font-weight:bold;  
+  background: url('nv.png') no-repeat 0px 0px;
+  width: auto;
+  line-height: 33px;
+  padding-left:15px;
+  padding-right:15px;
+  display: block;
+}
+#nav li a:hover{
+  background: url('nv_a.png') repeat-x -120px -33px;  
+}
+/*导航条结束*/
+
+/*******顶部搜索栏***********/
+#search_1 {
+	width: 958px;
+	height: 45px;
+	border: 1px solid #DFCDDE;
+	border-top:0px;
+	border-bottom:0px;
+	margin: 0 auto;
+	background: url("search.png") repeat-x 0px 0px;
+}
+
+#search_11{
+	width: 49px;
+	height: 45px;
+	background: url("search.png") no-repeat 0px -74px;
+	float: left;
+}
+#search_12{
+	width: 180px;
+	height: 45px;
+	background: url("search.png") repeat-x 0px -222px;
+	float: left;
+}
+#search_13{
+	width: 50px;
+	height: 45px;
+	background: url("search.png") repeat-x 0px -370px;
+	float: left;
+	border:0px solid red;
+}
+#search_14{
+	width: 73px;
+	height: 45px;
+	background: url("search.png") no-repeat 0px -296px;
+	float: left;
+	border:0px solid red;
+}
+
+/*******顶部搜索栏结束***********/
+
+/**************路径栏*****************/
+
+#path_1{
+	width: 16px;
+	height: 16px;
+	margin-top: 1px;
+	background: url("search.png") no-repeat -8px -128px;
+	float: left;
+}
+#path_2{
+	width: 8px;
+	height: 11px;
+	border: 0px solid red;
+	background: url("search.png") no-repeat -27px -127px;
+	float: left;
+	margin-top:3px;
+	margin-left: 3px;
+	margin-right: 8px;
+}
+#path_3{
+	width: auto;
+	height: 16px;
+	float: left;
+}
+
+/**************路径栏结束*****************/
+
+/************分区列表******************/
+
+.index_span2{/*首页显示分区的字*/
+	font-family: microsoft yahei;
+	font-size: 13px;
+	color: #6F09B2;
+	font-weight: bold;
+	line-height: 30px;
+	margin-left: 20px;
+}
+#index_section{/*分区外围框*/
+	width: 958px;
+	height: auto;
+	border-left: 1px solid #DFCDDE;
+	border-right: 1px solid #DFCDDE;
+	border-bottom: 1px solid #DFCDDE;
+	background-color: white;  
+	margin: 0 auto;  
+	margin-bottom: 8px;
+}
+#index_sectiontitle{/*首页显示分区标题栏背景*/
+	width: 958px;
+	height: 30px;
+	border-bottom: 1px solid #DFCDDE;
+	border-top: 1px solid #DFCDDE;
+	background:url("titlebg.png") repeat-x 0px 0px;
+}
+
+.table_1{/*板块列表*/
+	width:958px;
+	margin:0px 0px;
+}
+
+.td_1{
+	width:64px;
+	height:64px;
+	border-bottom:1px solid #DFCDDE;
+	padding-left: 12px;
+}
+.td_2{
+	width:400px;
+	border-bottom:1px solid #DFCDDE;
+}
+.td_3{
+	width:100px;
+	border-bottom:1px solid #DFCDDE;
+	text-align: center;
+}
+.td_4{
+	width:100px;
+	border-bottom:1px solid #DFCDDE;
+	text-align: center;
+}
+.td_5{
+	padding-left: 15px;
+	border-bottom:1px solid #DFCDDE;
+}
+/**************分区列表结束*****************/
+
+/**********主题列表****************/
+#topicListBorder{
+	width:958px;
+	height:auto;
+	border:1px solid #DFCDDE;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.table_2{/*板块列表*/
+	width:100%;
+	margin:0px 0px;
+}
+.tr_11{
+	background-color: #F8EFF8;
+}
+.td_11{
+	width:35px;
+	border-bottom:1px solid #DFCDDE;
+	padding-left: 9px;
+}
+.td_22{
+	width:500px;
+	border-bottom:1px solid #DFCDDE;
+}
+.td_33{
+	width:150px;
+	border-bottom:1px solid #DFCDDE;
+	text-align: center;
+}
+.td_44{
+	width:80px;
+	border-bottom:1px solid #DFCDDE;
+	text-align: center;
+}
+.td_55{
+	padding-left: 15px;
+	border-bottom:1px solid #DFCDDE;
+}
+/***********主题列表结束***************/
+
+/******************************************/
+
+#topic_boardrule{/*topic-list.jsp页面板块规则的边框*/
+	width: 958px;
+	height:auto;
+	border: 1px solid #DFCDDE;
+	background-color: white;
+}
+#topic_fenye1{/*发帖图标*/
+	width: 80px;
+	height: 33px;
+	background-image: url("pn_post.png");
+	float: left;
+}
+#topic_fenye2 a{/*分页中显示页码的边框的颜色*/
+	padding: 3px 8px;
+	border: 1px solid #DFCDDE;
+	text-decoration: none;
+	font-family: microsoft yahei;
+	color:#444444;
+	line-height: 33px;
+	font-size:12px;
+	background-color: white;
+}
+#topic_fenye2 a:HOVER {/*分页中显示页码hover的颜色*/
+	color: #336699;
+	background-color:#DFCDDE;
+}
+#topic_fenye2 LABEL{/*分页中当前页的样式*/
+	padding: 3px 8px;
+	border: 1px solid #DFCDDE;
+	text-decoration: none;
+	font-family: microsoft yahei;
+	font-size:11px;
+	color:#333333;
+	background-color:#DFCDDE;
+	line-height: 33px;
+}
+.topic_tr1{/*topic-list.jsp页主题列表框的顶部背景*/
+	height: 30px;
+	background-color: #F8EFF8;
+}
+.topic_tr3{/*topic-list.jsp页主题列表本版主题顶部背景*/
+	height: 20px;
+	background-color: #F8EFF8;
+}
+#topic_new_top{/*topic-list.jsp页快速发帖标题栏颜色*/
+	width: 958px;
+	height: 28px;
+	background-color:#F8EFF8;
+	border-bottom: 1px solid #C2D5E3;
+	border-top: 1px solid white;
+}
+#topic_fenye3{/*回帖图标*/
+	background-image: url("pn_reply.png");
+}
+.pl_td1 {/*post-list.jsp页帖子列表左边框背景颜色*/
+	border-right: 1px solid #C2D5E3;
+	background-color: #F8EFF8;
+}
+.pl_td3 {/*post-list.jsp页每个帖子中间分割线颜色*/
+	background-color:#DFCDDE;
+	border-right:1px solid #c2d5e3;
+}
+.pl_td4 {/*post-list.jsp页每个帖子中间分割线颜色*/
+	background-color:#F8EFF8;
+}
+.post_subpost{/*post-list.jsp页回帖框里面的回帖提交按钮背景*/
+	background: url('nv_a.png') repeat 0px -33px;
+}

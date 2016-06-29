@@ -1,0 +1,140 @@
+
+#pl_title11{
+	width: 130px;
+	height:auto;
+	border: 0px solid red;
+	margin: auto auto;
+	
+}
+.poster{
+	
+	height:auto;
+	border: 0px solid red;
+	margin: 0 auto;
+}
+#pl_title12 {
+	width:769px;
+	height:auto;
+	border: 0px solid red;
+	margin: auto auto;
+}
+.pl_table1 {
+	width: 960px;
+	/*border:1px solid #cdcdcd;*/
+	border-top:1px solid #cdcdcd;
+	border-left:1px solid #cdcdcd;
+	border-right:1px solid #cdcdcd;
+	margin-top: 10px;
+	table-layout: fixed;
+	word-wrap:break-word;
+	background-color: white;
+}
+.pl_table2 {
+	width: 100%;
+	height:auto;
+	table-layout: fixed;
+	word-wrap:break-word;
+}
+#pl_title11 strong{
+	font-family: microsoft yahei;
+	font-size: 12px;
+	color: #444444;
+	font-weight: normal;
+}
+#pl_title11 span{
+	font-family: microsoft yahei;
+	font-size: 12px;
+	color: #FF4500;
+}
+#pl_title12 span a{
+	font-family: microsoft yahei;
+	font-size: 16px;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+}
+#pl_title12 span a:HOVER{
+	text-decoration: underline;
+}
+.pl_td2 {
+	width:799px;
+	min-height: 40px;
+}
+#post_list{
+	width: 958px;
+	height: auto;
+	border-left: 1px solid #cdcdcd;
+	border-right: 1px solid #cdcdcd;
+	background-color: white;
+	margin: 0 auto;
+}
+.pl_td1_top{
+	width: 156px;
+	min-height: 40px;
+	border-bottom: 1px dashed #cdcdcd;
+	margin: 0 auto;
+}
+.pl_td2_top{
+	width: 760px;
+	min-height: 40px;
+	border-bottom: 1px dashed #cdcdcd;
+	margin: 0 auto;
+}
+.pl_td2_sign{
+	width: 760px;
+	height: auto;
+	border-bottom: 1px dashed #cdcdcd;
+	margin: 0 auto;
+}
+.pl_td2_sign_1{
+	width: 760px;
+	height: auto;
+}
+.pl_td2_sign_2{
+	width: 760px;
+	min-height: 40px;
+	padding: 15px 0px;
+}
+.pl_td2_sign_2 span{
+	font-size: 12px;
+	color: #999999;
+}
+.pl_td1_center{
+	width: 156px;
+	height: 345px;
+	border: 0px solid red;
+	margin: 0 auto;
+}
+.pl_td2_center{
+	width: 760px;
+	height: auto;
+	border: 0px solid red;
+	margin: 0 auto;
+	
+}
+.post_str1{
+	font-family: microsoft yahei;
+	font-size: 14px;
+	color: #333333;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+.post_str2{
+	font-family: microsoft yahei;
+	font-size: 12px;
+	color: #444444;
+}
+.post_str2 a{
+	text-decoration: none;
+	color: #336699;
+}
+.post_str2 a:hover{
+	text-decoration: underline;
+}
+#userImage{
+	width: 120px;
+	height: 120px;
+	border: 5px solid white;
+	margin: 10px auto;
+}

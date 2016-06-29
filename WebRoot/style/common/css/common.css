@@ -1,0 +1,32 @@
+#comm_1{position:absolute;top:0px;left:0px;z-index:-1;width: 100%;height: auto;border: 0px solid black;margin: 0 auto;margin-top: 0px;}
+#comm_2{width: 960px;height: 24px;border-bottom: 0px solid red;margin: 0 auto;}
+#comm_3{width: 960px;height: auto;border: 0px solid red;margin: 0 auto;margin-top: 28px;}
+#comm_4{width: 960px;height: 74px;border: 0px solid red;margin: 0 auto;margin-top: 8px;}
+#comm_41{width: 120px;height: 55px;border: 0px solid red;margin-top: 9px;float: left;}
+#comm_42{width: auto;height: 56px;border: 0px solid red;margin-top: 9px;float: right;}
+#comm_421{width: 400px;height: 56px;border: 0px solid red;margin-top: 0px;float: right;margin-right: 10px;}
+#comm_4211{width: 400px;height: 20px;border: 0px solid red;text-align: right;}
+#comm_422{width: 56px;height: 56px;border: 1px solid #cdcdcd;margin-top: 0px;float: right;background-color: white;}
+#comm_4221{width: 52px;height: 52px;margin: 2px;}
+#comm_5{width: 958px;height: 150px;border: 1px solid #cdcdcd;border-top:0px;margin: 0 auto;background: white; }
+#search_15{width: 590px;height: 45px;float: left;border:0px solid red;}
+#comm_6{width: 960px;height: 18px;border:0px solid red;margin: 8px auto;}
+#comm_7{width: 200px;height: 50px;border:1px solid red;margin: 15px 10px;display: block;}
+#topic_fenye{width: 960px;height: 33px;border:0px solid red;margin-top: 10px;margin: 10px auto;}
+#topic_fenye2{width: 798px;height: 33px;border-bottom:0px solid red;border-top:0px solid red;float: right;text-align: right;}
+#topic_fenye2 strong {padding: 3px 0px;text-decoration: none;font-family: microsoft yahei;font-size:11px;color:#444444;line-height: 33px;}
+#comm_8{width:958px;height:auto;border:1px solid #cdcdcd;margin: 0 auto;background-color: white;}
+#comm_9{width: 958px;height: auto;border: 1px solid #cdcdcd;margin: 0 auto;background-color: white;}
+.comm9_tr1{height: 30px;background-color: #f2f2f2;}
+.comm9_td1{width: 200px;height: 30px;border-bottom: 1px solid #cdcdcd;padding: 8px 0px;}
+.comm9_td2{border-bottom: 1px solid #cdcdcd;}
+.submit_1{padding: 3px 5px;border:0px;color:white;font-family: microsoft yahei;cursor: pointer;}
+#comm_10{width: 958px;height: 320px;border: 1px solid #cdcdcd;margin: 0px auto;background-color: white;}
+#comm_11{width: 958px;height: 33px;border-bottom: 1px solid #cdcdcd;border-top: 1px solid white;background-color: #f2f2f2;}
+#comm_12{width: 700px;height: 240px;margin: 0 auto;margin-top: 30px;border: 0px solid red;}
+.comm_td3{height: 45px;width: 125px;border-bottom: 1px dotted #cdcdcd;text-align: right;}
+.comm_td4{width: 250px;border-bottom: 1px dotted #cdcdcd;}
+.comm_td5{width: 350px;border-bottom: 1px dotted #cdcdcd;padding-left: 15px;}
+
+
+

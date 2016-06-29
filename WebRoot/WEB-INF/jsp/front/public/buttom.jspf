@@ -1,0 +1,12 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!-- 广告代码 -->
+<div style="width:960px;height:auto; margin:10px auto;">
+	<img src="${pageContext.request.contextPath}<%=application.getAttribute("buttomImage") %>" />
+</div>
+<!-- 广告代码 （结束）-->
+<hr style="width: 960px;margin: 0 auto;border:0px;border-bottom:1px solid #999999;"/>
+		
+<div style="width:960px;height:50px; margin:10px auto;">
+	<span class="span_3">Power by <a class="a_0" href="" style="color:black;font-weight:bold;"><%=application.getAttribute("authorname") %></a></span>
+	<span class="span_3" style="float:right;"><a class="a_0" href="" style="color:black;font-weight:bold;"><%=application.getAttribute("bbsname") %></a></span>
+</div>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.qiqiao.model">
+	
+	<class name="Topic" table="qiqiao_topic">
+        <id name="id" >
+            <generator class="native"/>
+        </id>
+        <property name="title" />
+        <property name="content" type="text" />
+        <property name="postTime" type="timestamp" />
+        <property name="lastUpdateTime" type="timestamp" />
+        <property name="ipAddr" />
+        <property name="topScope" />
+        <property name="replyCount" />
+        <property name="visits" />
+        <property name="highColor" />
+        <property name="digest" />
+        <property name="recommend" />
+        <property name="state" />
+        <property name="isAttach" />
+        <property name="param" />
+        
+        <!-- board属性，表达的是本对象与Board对象的多对一关系 -->
+        <many-to-one name="board" class="Board" column="boardId"></many-to-one>
+        
+        <!-- section属性，表达的是本对象与Section对象的多对一关系 -->
+        <many-to-one name="section" class="Section" column="sectionId"></many-to-one>
+        
+        <!-- user属性，表达的是本对象与User对象的多对一关系 -->
+        <many-to-one name="user" class="User" column="userId"></many-to-one>
+        
+        <!-- lastReply属性，表达的是本对象与Reply对象的一对一关系 -->
+        <many-to-one name="lastReply" class="Reply" column="lastReplyId" unique="true"></many-to-one>
+        
+        <!-- attaches属性，表达的是本对象与Attach对象的一对多关系 -->
+        <set name="attaches">
+			<key column="topicId"></key>
+			<one-to-many class="Attach"/>
+		</set>
+        
+        <!-- replies属性，表达的是本对象与Reply对象的一对多关系 -->
+        <set name="replies">
+			<key column="topicId"></key>
+			<one-to-many class="Reply"/>
+		</set>
+        
+    </class>
+
+</hibernate-mapping>

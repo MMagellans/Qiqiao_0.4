@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<imagePath>
+		<!-- 论坛顶部图片路径(相对路径) -->
+		<topImage>ad.png</topImage>
+		<!-- 论坛底部图片路径(相对路径) -->
+		<buttomImage>ad2.gif</buttomImage>
+		<!-- 论坛图标 -->
+		<bbsicon>logo.png</bbsicon>
+		<!-- 论坛后台图标 -->
+		<bbsadminicon>logo2.png</bbsadminicon>
+	</imagePath>
+	<name>
+		<!-- 论坛的名称，页面右下角显示 -->
+		<bbsname>武汉科技大学技术论坛</bbsname>
+		<!-- 论坛作者 -->
+		<authorname>Mr.Perf</authorname>
+		<!-- 论坛标题 -->
+		<bbstitle>武汉科技大学技术论坛</bbstitle>
+	</name>
+	<hexie>
+		<words>fuck</words>
+		<replace>*河蟹*</replace>
+	</hexie>
+</conf>

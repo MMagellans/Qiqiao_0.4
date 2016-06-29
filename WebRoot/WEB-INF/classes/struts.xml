@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 配置扩展名 -->
+	<constant name="struts.action.extension" value="action,do" />
+	<!-- 配置主题 -->	
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 允许自定义标签中调用静态方法 -->	
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<!-- 文件上传临时目录 -->
+	<constant name="struts.multipart.saveDir" value="E:/tomcat/upload"></constant>
+	<!-- 文件上传大小限制 50*1024*1024 50M -->
+	<constant name= "struts.multipart.maxSize" value="52428800" />
+	
+	<!-- struts-default -->
+	<package name="default" namespace="/" extends="json-default">
+	
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<!-- 配置自定义拦截器  -->
+			<interceptor name="checkPrivilege" class="com.qiqiao.intercepter.CheckPrivilegeInterceptor"></interceptor>
+			
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="checkPrivilege"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<global-results>
+			<!-- 前台登陆页面 -->
+			<result name="frontLoginUI">/WEB-INF/jsp/front/userAction/loginUI.jsp</result>
+			<!-- 显示没有权限的页面 -->
+			<result name="noPrivilegeError">/noPrivilegeError.jsp</result>
+			<result name="toForward">/forwardUI.jsp</result>
+			<result name="exception">/exception.jsp</result>
+		</global-results>
+		
+		<!-- 全局异常处理
+		<global-exception-mappings>
+			<exception-mapping result="exception" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings> -->
+		
+		<!-- UserAction配置 -->
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="registerUI">/WEB-INF/jsp/front/userAction/registerUI.jsp</result>
+			<result name="toList" type="redirectAction">sectionAction_list</result>
+			<result name="selectUserByUsername" type="json">
+                <param name="root">result</param>
+            </result>
+		</action>
+		
+		<!-- SectionAction配置 -->
+		<action name="sectionAction_*" class="sectionAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/front/sectionAction/list.jsp</result>
+			<result name="toList" type="redirectAction">sectionAction_list</result>
+			<result name="setSectionSort" type="json">
+                <param name="root">result</param>
+            </result>
+		</action>
+		
+		<!-- BoardAction配置 -->
+		<action name="boardAction_*" class="boardAction" method="{1}">
+			<result name="addUI">/WEB-INF/jsp/admin/boardAction/addUI.jsp</result>
+			<result name="show">/WEB-INF/jsp/front/boardAction/show.jsp</result>
+			<result name="editUI">/WEB-INF/jsp/admin/boardAction/editUI.jsp</result>
+			<result name="mergerUI">/WEB-INF/jsp/admin/boardAction/mergerUI.jsp</result>
+			<result name="setUI">/WEB-INF/jsp/admin/boardAction/setUI.jsp</result>
+			<result name="sectionSetUI">/WEB-INF/jsp/admin/boardAction/sectionSetUI.jsp</result>
+			<result name="setModeratorUI">/WEB-INF/jsp/admin/boardAction/setModeratorUI.jsp</result>
+			<result name="noexist">noexist.jsp</result>
+			<result name="setBoardSort" type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="setModerator" type="json">
+                <param name="root">result</param>
+            </result>
+			<result name="toEdit" type="redirectAction">boardAction_editUI</result>
+		</action>
+		
+		<!-- TopicAction配置 -->
+		<action name="topicAction_*" class="topicAction" method="{1}">
+			<result name="addUI">/WEB-INF/jsp/front/topicAction/addUI.jsp</result>
+			<result name="show">/WEB-INF/jsp/front/topicAction/show.jsp</result>
+			<result name="resultList">/WEB-INF/jsp/admin/topicAction/resultList.jsp</result>
+			<result name="managerUI">/WEB-INF/jsp/admin/topicAction/managerUI.jsp</result>
+			<result name="toShow" type="redirectAction">topicAction_show</result>
+		</action>
+		
+		<!-- ReplyAction配置 -->
+		<action name="replyAction_*" class="replyAction" method="{1}">
+			<result name="addUI">/WEB-INF/jsp/front/replyAction/addUI.jsp</result>
+			<!-- TODO 回帖后的页面跳转问题 -->
+			<result name="toTopicShow" type="redirectAction">topicAction_show?id=${topicId}</result>
+		</action>
+		
+		<!-- AdminAction配置 -->
+		<action name="adminAction_*" class="adminAction" method="{1}">
+			<result name="loginUI">/WEB-INF/jsp/admin/adminAction/loginUI.jsp</result>
+			<result name="success">/WEB-INF/jsp/admin/adminAction/main.jsp</result>
+			<result name="basicSet">/WEB-INF/jsp/admin/adminAction/basicSet.jsp</result>
+			<result name="toLoginUI" type="redirectAction">adminAction_loginUI</result>
+			<result name="toBasicSet" type="redirectAction">adminAction_basicSet</result>
+			<result name="setPageSize" type="json">
+                <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                     			 注意：root为固定写法，否则不会把result的值返回给客户端 -->
+                <param name="root">result</param>
+            </result>
+            <result name="exception">/exception.jsp</result>
+		</action>
+		
+		<!-- RoleAction配置 -->
+		<action name="roleAction_*" class="roleAction" method="{1}">
+			<result name="list">/WEB-INF/jsp/admin/roleAction/list.jsp</result>
+			<result name="vipList">/WEB-INF/jsp/admin/roleAction/vipList.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/admin/roleAction/addUI.jsp</result>
+			<result name="updateUI">/WEB-INF/jsp/admin/roleAction/updateUI.jsp</result>
+			<result name="setPrivilegeUI">/WEB-INF/jsp/admin/roleAction/setPrivilegeUI.jsp</result>
+			<result name="toList" type="redirectAction">roleAction_list</result>
+			<result name="toVipList" type="redirectAction">roleAction_vipList</result>
+		</action>
+		<!-- 附件Action配置 -->
+		<action name="attachAction_*" class="attachAction" method="{1}">
+			<result name="download" type="stream">
+				<param name="inputStream">inputStream</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+                <param name="bufferSize">4096</param>
+			</result>
+		</action>
+		
+		<action name="imageCode" class="com.qiqiao.view.action.ImageAction">
+			<result name="success" type="stream">
+				<param name="inputName" >imageStream</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+		
+	</package>
+	
+	<package name="login" namespace="/" extends="json-default">
+		<!-- UserAction配置(此处因为登录采用异步方式，所以单独给一个action) -->
+		<action name="login" class="userAction" method="login">
+			<result type="json">
+                <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                     			 注意：root为固定写法，否则不会把result的值返回给客户端 -->
+                <param name="root">result</param>
+            </result>
+		</action>
+		<action name="logout" class="userAction" method="logout">
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+		</action>
+		<action name="usernameValidate" class="userAction" method="usernameValidate">
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+		</action>
+		<!-- 第二个boardAction，主要使用异步方式的某些方法 -->
+		<action name="boardAction2_*" class="boardAction" method="{1}">
+			<result type="json">
+                <param name="root">result</param>
+            </result>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,117 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+	<div id="comm_1">
+		<div id="tp1_back">
+			<div id="comm_2">
+				<a href="#" class="a_1">设为首页</a>
+				<a href="#" class="a_1">收藏本站</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="comm_3">
+		<img src="${pageContext.request.contextPath}${topImage}" />
+	</div>
+	<div id="comm_4">
+		<div id="comm_41"><img src="${pageContext.request.contextPath}${bbsicon}"/></div>
+		<div id="comm_42">
+			
+			<!-- <form action="#" method="post"> -->
+			<s:if test="#session.login == null">
+			<table cellpadding="0" cellspacing="0" style="width: 340px;height: 55px;" >
+				<tr style="height: 28;vertical-align: middle;" valign="middle">
+					<td width="40px;" align="center">
+						<span class="span_1">账号</span>
+					</td>
+					<td width="170px;" align="center">
+						<input type="text" id="username" name="username" class="input_1"/>
+					</td>
+					<td width="65px;" align="left" style="border-right: 1px solid #e0e0e0;">
+						<span class="span_1">忘记密码？</span>
+					</td>
+					<td width="65px;" align="center">
+						<a href="#" class="a_1">立即找回</a>
+					</td>
+				</tr>
+				<tr style="height: 28;" valign="middle">
+					<td width="40px;" align="center">
+						<span class="span_1">密码</span>
+					</td>
+					<td width="170px;" align="center">
+						<input type="password" id="password" name="password" class="input_1"/>
+					</td>
+					<td width="65px;" align="left" style="border-right: 1px solid #e0e0e0;">
+						<input type="button" onclick="subLogin()" value="登录" class="input_2"/>
+					</td>
+					<td width="65px;" align="center">
+						<a href="userAction_registerUI.action" class="a_1" style="font-weight: bold;color: #3395D8;">立即注册</a>
+					</td>
+				</tr>
+			</table>
+			</s:if>
+			<!-- </form> -->
+			<s:else>
+			<div id="comm_422"><div id="comm_4221"><img src="${pageContext.request.contextPath}/style/common/images/noavatar_small.gif" width="52px;" height="52px;"/></div></div>
+			<div id="comm_421">
+				<div id="comm_4211">
+					<a class="a_2" href="${pageContext.request.contextPath }/building.jsp">${login.username}</a>
+					<span class="span_2">|</span>
+					<a class="a_1" href="${pageContext.request.contextPath }/building.jsp">设置</a>
+					<span class="span_2">|</span>
+					<s:a id="adminManager" cssClass="a_1" href="adminUI.html" action="adminAction_loginUI">后台管理</s:a>
+					<span id="nextadmin" class="span_2">|</span>
+					<a class="a_1" href="${pageContext.request.contextPath }/building.jsp">消息</a>
+					<span class="span_2">|</span>
+					<a class="a_1" href="${pageContext.request.contextPath }/building.jsp">提醒</a>
+					<span class="span_2">|</span>
+					<a class="a_1" href="javascript:Logout();">退出</a>
+				</div>
+				<div id="comm_4211" style="margin-top: 12px;">
+					<a class="a_1" href="${pageContext.request.contextPath }/building.jsp">积分：${login.credits}</a>
+					<span class="span_2">|</span>
+					<a class="a_1" href="${pageContext.request.contextPath }/building.jsp">用户组：新手上路</a>
+				</div>
+			</div>
+			</s:else>
+		</div>
+	</div>
+	
+	<div id="nav" style="margin-bottom: 0px;">
+		<div id="nav1">
+			<ul>
+				<!-- <li><a href="${pageContext.request.contextPath }/building.jsp">首页</a></li> -->
+				<li><a href="forum.html">论坛</a></li>
+				<!-- <li><a href="${pageContext.request.contextPath }/building.jsp">广播</a></li> -->
+				<!-- <li><a href="${pageContext.request.contextPath }/building.jsp">投票系统</a></li> -->
+				<!-- <li><a href="${pageContext.request.contextPath }/building.jsp">满意度调查</a></li> -->
+			</ul>	
+		</div>
+	</div>
+	<!-- <div id="comm_5"></div> -->
+	<!-- <div id="search_1">
+		<div id="search_11"></div>
+		<div id="search_12"><input type="text" class="input_3"/></div>
+		<div id="search_13"></div>
+		<div id="search_14"><a href="${pageContext.request.contextPath }/building.jsp" class="a_3">搜索</a></div>
+		<div id="search_15">
+			&nbsp;&nbsp;<a class="a_2" style="line-height: 45px;">热搜:</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">结婚</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">交友</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">网页游戏</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">团购</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">结婚</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">交友</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">网页游戏</a>
+			<a href="${pageContext.request.contextPath }/building.jsp" class="a_1">团购</a>
+		</div>
+	</div>
+	 -->
+	<script type="text/javascript">
+		var node = document.getElementById("adminManager");
+		if(node == null) {
+			var shuxian = document.getElementById("nextadmin");
+			if(shuxian != null) {
+				shuxian.style.display = "none";
+			}
+		}
+	</script>

@@ -1,0 +1,14 @@
+# =========================
+# Operating System Files
+# =========================
+.svn/
+sqlScripts/
+.gitignore
+.settings/
+.project
+.classpath
+target/
+WebRoot/WEB-INF/classes/
+WebRoot/WEB-INF/lib/
+*.iml
+.idea/

@@ -10,6 +10,7 @@
 	<properties>
 		<!-- spring版本号 -->
 		<spring.version>3.2.4.RELEASE</spring.version>
+		<struts2.version>2.3.32</struts2.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>  
 	</properties>
@@ -51,18 +52,8 @@
 			<artifactId>jta</artifactId>
 			<version>1.1</version>
 		</dependency>
-
-		<!-- SpringMVC依赖 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+		
+		<!-- SpringCore依赖 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -98,6 +89,25 @@
 			<artifactId>spring-expression</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
+		<!-- Struts2MVC依赖 -->
+		<dependency>
+    		<groupId>org.apache.struts</groupId>
+    		<artifactId>struts2-core</artifactId>
+    		<version>${struts2.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.struts</groupId>
+		    <artifactId>struts2-spring-plugin</artifactId>
+		    <version>${struts2.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.struts</groupId>
+		    <artifactId>struts2-json-plugin</artifactId>
+		    <version>${struts2.version}</version>
+		</dependency>
+		
+		
 
 		<!-- Spring对JDBC支持依赖 -->
 		<dependency>
